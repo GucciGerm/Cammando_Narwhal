@@ -3,6 +3,7 @@
     Sript that starts a Flask web application
  """
 from flask import Flask, render_template, request, abort
+import subprocess
 app = Flask(__name__)
 
 
@@ -31,7 +32,8 @@ def authenticate():
 	return(render_template("auth.html", username=username, password=password))
 
 def OAUTH(user, pw):
-	pass
+	url = "https://api.github.com/user/repos"
+	x = subprocess.check_output(["curl", "-u", "{}:{}".format(username,password), url]).decode("utf-8")
 
 if __name__ == '__main__':
         app.run(port=5007, threaded=True)
