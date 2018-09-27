@@ -4,7 +4,13 @@
 }
 html {height: 100%;}
 body {height: 100%; background: var(--headfoot);}
-main {height: 90%; background: green;}
-footer {height: 10%; background: var(--headfoot); color: white;}
-article {height: 100%; background: #619b8a; width: 100%; float:left;}
-aside {height: 0%; background: #233d4d; width: 0%; height: 0%; float: right; display:none;}
+main {height: 100%; background: green;}
+footer {height: 0%; background: var(--headfoot); color: white;}
+article {height: 100%; background: #619b8a; width: 100%; float:left; overflow-y: scroll;}
+aside {height: 100%; background: #233d4d; width: 0%; float: right; display:none;}
+section {max-height: 60%; width: 90%; border-bottom: 1px dotted crimson; padding-bottom: 10%; }
+.repo {color: lightgray; font-size: 300%; font-weight: bold; text-align: center;}
+/*.repoName, .description {text-align: center;}*/
+
+article.repo {width: 50%; font-size: 100%;}
+aside.repo {width: 50%; display:block;}

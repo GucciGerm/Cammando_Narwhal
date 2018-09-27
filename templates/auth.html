@@ -6,12 +6,16 @@
 </head>
 <body>
 <main>
-    <article id="interface"></article>
-    <aside id="repos"></aside>
-    <aside id="repo"></aside>
+    <article id="interface" class="repos">
+    	{% for repo in repos %}
+    	<section class="repo" data-name="{{repo.full_name}}" data-desc="{{repo.description}}" data-contributors="{{repo.contributors}}"></section>
+    	
+    	{% endfor %}
+    </article>
+    <aside id="repo" class="repos"></aside>
 </main>
 
-<footer>Recieved Username: {{username}} Recieved Password: {{password}}</footer>
+<footer></footer>
 
     <script type="text/javascript" src="static/functionality.js"></script>
 </body>
