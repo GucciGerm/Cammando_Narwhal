@@ -2,7 +2,7 @@
 """
     Sript that starts a Flask web application
  """
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 
@@ -30,7 +30,7 @@ def authenticate():
 
 	result = OAUTH(username, password)
 
-	print(result)
+	return(render_template(username=username, password=password))
 
 if __name__ == '__main__':
         app.run(port=5007, threaded=True)
