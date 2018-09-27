@@ -6,11 +6,32 @@ html {height: 100%;}
 body {height: 100%; background: var(--headfoot);}
 main {height: 100%; background: green;}
 footer {height: 0%; background: var(--headfoot); color: white;}
-article {height: 100%; background: #619b8a; width: 100%; float:left; overflow-y: scroll;}
-aside {height: 100%; background: #233d4d; width: 0%; float: right; display:none;}
+article {height: 100%; background: #619b8a; width: 100%; float:left; overflow-y: scroll; box-sizing: border-box;}
+aside {height: 100%; background: #233d4d; width: 0%; float: right; display:none; box-sizing: border-box;}
 section {max-height: 60%; width: 90%; border-bottom: 1px dotted crimson; padding-bottom: 10%; }
 .repo {color: lightgray; font-size: 300%; font-weight: bold; text-align: center;}
 /*.repoName, .description {text-align: center;}*/
 
-article.repo {width: 50%; font-size: 100%;}
-aside.repo {width: 50%; display:block;}
+article.repo {width: 50%; font-size: 100%; height: 100%;}
+aside.repo {width: 50%; display:block; text-align: left; height: 100%;  overflow-y: scroll;}
+
+.asideData {width: 100%; height:20%; color:gold;margin-top: 10%;}
+.caption {color: gold; font-size: 50%; position: relative; left:0;}
+.asideText {color:crimson; font-size: 50%; position: relative; left: 30%;}
+
+
+form {
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	height: 80%;
+	width: 80%;
+	background: #041B15;
+	border-radius: 20%;
+	color: white; font-weight: bold;
+}
+
+#usernameDiv{text-align: center;position:relative; top: 20%; color: white; font-weight: bold;}
+#passwordDiv{text-align: center;position:relative; top: 25%; color: white; font-weight: bold;}
+#submit{text-align: center;position:relative; top: 60%;}
+

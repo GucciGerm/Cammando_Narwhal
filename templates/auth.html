@@ -8,14 +8,28 @@
 <main>
     <article id="interface" class="repos">
     	{% for repo in repos %}
-    	<section class="repo" data-name="{{repo.full_name}}" data-desc="{{repo.description}}" data-contributors="{{repo.contributors}}"></section>
+    	<section class="repo" 
+    	data-name="{{repo.full_name}}" 
+    	data-desc="{{repo.description}}" 
+    	data-contributors="{{repo.contributors}}"
+    	data-createdAt="{{repo.created_at}}"
+    	data-updatedAt="{{repo.updated_at}}"
+    	data-size="{{repo.size}}"
+    	></section>
     	
     	{% endfor %}
     </article>
-    <aside id="repo" class="repos"></aside>
+    <aside id="repo" class="repos">
+    	<div class="asideData" id="asideName"></div>
+    	<div class="asideData" id="asideDesc"></div>
+    	<div class="asideData" id="asideCreatedAt"></div>
+    	<div class="asideData" id="asideUpdatedAt"></div>
+    	<div class="asideData" id="asideSize"></div>
+    	<div class="asideData" id="asideContributors"></div>
+    </aside>
 </main>
 
-<footer></footer>
+<!-- <footer></footer> -->
 
     <script type="text/javascript" src="static/functionality.js"></script>
 </body>
