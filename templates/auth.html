@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Narwhal Github</title>
-    <link rel="stylesheet" type="text/css" href="static/styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
 <main>
@@ -31,6 +31,6 @@
 
 <!-- <footer></footer> -->
 
-    <script type="text/javascript" src="static/functionality.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='functionality.js') }}"></script>
 </body>
 </html>
